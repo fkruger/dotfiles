@@ -1,0 +1,37 @@
+
+alias ls='ls -FG'
+alias ll='ls -FGlAhp'
+alias dir='ls'
+alias less='less -FSRXc'
+alias m='less'
+alias path='echo -e ${PATH//:/\\n}'
+alias home="cd ~"
+alias ports='netstat -tulanp'
+alias rm='rm -I'
+#alias apt='sudo apt'
+alias df='df -h'
+alias du='du -ch'
+
+alias pscpu='ps wwaxr -o pid,stat,%cpu,time,command | head -10'
+alias psmem='ps wwaxm -o pid,stat,vsize,rss,time,command | head -10'
+alias topcpu='top -o cpu'
+alias topmem='top -o mem'
+
+alias extip='curl ifconfig.me'
+
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+
+ii() {
+    echo -e "\nYou are logged on ${RED}$HOST"
+    echo -e "\nAdditional information:$NC " ; uname -a
+    echo -e "\n${RED}Users logged on:$NC " ; w -h
+    echo -e "\n${RED}Current date:$NC " ; date
+    echo -e "\n${RED}Machine stats:$NC " ; uptime
+    #echo -e "\n${RED}Current network location:$NC " ; scselect
+    echo -e "\n${RED}Public facing IP Address:$NC " ; extip
+    echo -e "\n${RED}Machine wired IP Address:$NC" ; ipconfig getifaddr en1
+    echo -e "\n${RED}Machine wireless IP Address:$NC " ; ipconfig getifaddr en0
+    echo
+}
+
