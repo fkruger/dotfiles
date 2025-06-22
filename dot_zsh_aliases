@@ -1,14 +1,13 @@
 
-alias ls='ls -FG'
-alias ll='ls -FGlAhp'
-alias dir='ls'
-alias less='less -FSRXc'
-alias m='less'
+alias ls='lsd -FG'
+alias ll='lsd -FGlAh'
+alias dir='ls'man q
+alias less='moar'
+alias m='moar'
 alias path='echo -e ${PATH//:/\\n}'
 alias home="cd ~"
 alias ports='netstat -tulanp'
 alias rm='rm -I'
-#alias apt='sudo apt'
 alias df='df -h'
 alias du='du -ch'
 
