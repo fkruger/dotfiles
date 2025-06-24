@@ -1,0 +1,20 @@
+# -------- Linux‑specific tweaks -----
+{{- if eq .chezmoi.os "linux" }}
+{{- end }}
+
+
+# -------- Personal aliases ----------
+source ~/.bash_aliases
+
+
+# -------- OAI specific --------------
+{{- if .openai }}
+{{- end }}
+
+# -------- personal specific --------------
+{{- if .personal }}
+{{- end }}
+
+# -------- IoT specific --------------
+{{- if .iot }}
+{{- end }}
