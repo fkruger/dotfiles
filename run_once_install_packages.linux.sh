@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# This script runs **once** on Linux hosts.
+
+set -euo pipefail
+sudo apt-get update
+
+sudo apt-get install -y \
+  git micro lsd tealdeer thefuck bat zoxide mosh tmux net-tools curl wget go
+  
+go install github.com/walles/moar@latest #no debian package
+
+
+
