@@ -1,0 +1,26 @@
+# -------- macOS‑specific tweaks -----
+{{- if eq .chezmoi.os "darwin" }}
+  export PATH="/opt/homebrew/bin:$PATH"
+  # any brew‑only env vars here
+{{- end }}
+
+
+# -------- Personal aliases ----------
+source ~/.zsh_aliases
+
+
+# -------- OAI specific --------------
+{{- if .openai }}
+  export SSH_AUTH_SOCK=/Users/fritz/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
+  
+  eval "$(am shell)"
+  
+  source ~/.zshrc-secrets
+  export GIT_SSH_COMMAND="am keysign; ssh"
+  eval $(python -m rcall.shell)
+  #eval "$(bbb complete init zsh)"
+  #source <(/Users/fritz/.openai/bin/brix completion zsh)
+  
+  # Added by Windsurf
+  export PATH="/Users/fritz/.codeium/windsurf/bin:$PATH"
+{{- end }}
