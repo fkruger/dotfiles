@@ -20,6 +20,10 @@ ii() {
 
 # -------- OAI specific --------------
 {{- if .openai }}
+      alias oaicode='python -m oaicode'
+      alias oaipkg='python -m oaipkg' 
+      alias tcom='source ~/.virtualenvs/tcom-ipsw/bin/activate; cd ~/code/openai/project/tcom'
+      alias pre-commit='SKIP=update-isort-config pre-commit'
 {{- end }}
 
 # -------- personal specific --------------
