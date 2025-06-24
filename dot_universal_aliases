@@ -32,7 +32,7 @@ ii() {
       echo -e "\n${RED}Machine wireless IP Address:$NC " ; ipconfig getifaddr en0
       echo
       }
-}]']'
+}
 
 
 {{- if .openai }}
