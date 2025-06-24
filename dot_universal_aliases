@@ -17,24 +17,6 @@ alias topmem='top -o mem'
 
 alias extip='curl ifconfig.me'
 
-RED='\033[0;31m'
-NC='\033[0m' # No Color
-
-ii() {
-      echo -e "\nYou are logged on ${RED}$HOST"
-      echo -e "\nAdditional information:$NC " ; uname -a
-      echo -e "\n${RED}Users logged on:$NC " ; w -h
-      echo -e "\n${RED}Current date:$NC " ; date
-      echo -e "\n${RED}Machine stats:$NC " ; uptime
-      #echo -e "\n${RED}Current network location:$NC " ; scselect
-      echo -e "\n${RED}Public facing IP Address:$NC " ; extip
-      echo -e "\n${RED}Machine wired IP Address:$NC" ; ipconfig getifaddr en1
-      echo -e "\n${RED}Machine wireless IP Address:$NC " ; ipconfig getifaddr en0
-      echo
-      }
-}
-
-
 {{- if .openai }}
       alias oaicode='python -m oaicode'
       alias oaipkg='python -m oaipkg' 
