@@ -1,0 +1,5 @@
+{{- if eq .chezmoi.os "darwin" -}}
+{{-   include ".zshrc-darwin" -}}
+{{- else if eq .chezmoi.os "linux" -}}
+{{-   include ".zshrc-linux" -}}
+{{- end -}}
