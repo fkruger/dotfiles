@@ -1,0 +1,11 @@
+
+{{- $choices: list "personal" "rpi" "openai" "termux" -}}
+{{- $role: promptChoiceOnce . "role" "What type of host are you on" $choices -}}
+[data]
+    hosttype = {{- $hosttype | quote -}}
+
+data:
+  name: "Fritz Kruger"
+  email: "fritz_269@yahoo.com"
+  role: {{- $role | quote -}}
+  
