@@ -1,4 +1,3 @@
-{{- if eq .chezmoi.os "linux" -}}
 source ~/.universal_aliases
 
 RED='\033[0;31m'
@@ -30,4 +29,3 @@ ii() {
 {{- if eq .role "rpi" }}
 {{- end }}
 
-{{- end -}}
