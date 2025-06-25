@@ -1,8 +1,8 @@
+{{- if eq .chezmoi.os "linux" -}}
 source ~/.universal_aliases
 
 RED='\033[0;31m'
 NC='\033[0m' # No Color
-
 ii() {
       echo -e "\nYou are logged on ${RED}$HOST"
       echo -e "\nAdditional information:$NC " ; uname -a
@@ -34,3 +34,4 @@ ii() {
 {{- if eq .role "rpi" }}
 {{- end }}
 
+{{- end -}}
