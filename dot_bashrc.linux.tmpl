@@ -6,13 +6,13 @@ source ~/.bash_aliases
 
 
 # -------- OAI specific --------------
-{{- if .openai }}
+{{- if eq .role "openai" }}
 {{- end }}
 
 # -------- personal specific --------------
-{{- if .personal }}
+{{- if eq .role "personal" }}
 {{- end }}
 
 # -------- IoT specific --------------
-{{- if .iot }}
+{{- if eq .role "rpi" }}
 {{- end }}
