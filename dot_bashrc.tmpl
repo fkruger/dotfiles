@@ -1,5 +1,18 @@
-{{- if eq .chezmoi.os "darwin" -}}
-{{-   include ".bashrc_darwin" -}}
-{{- else if eq .chezmoi.os "linux" -}}
-{{-   include ".bashrc_linux" -}}
-{{- end -}}
+# -------- Linux‑specific tweaks -----
+export PATH=$PATH:~/go/bin/
+
+# -------- Personal aliases ----------
+source ~/.bash_aliases-linux
+
+
+# -------- OAI specific --------------
+{{- if eq .role "openai" }}
+{{- end }}
+
+# -------- personal specific --------------
+{{- if eq .role "personal" }}
+{{- end }}
+
+# -------- IoT specific --------------
+{{- if eq .role "rpi" }}
+{{- end }}
