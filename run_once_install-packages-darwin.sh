@@ -1,3 +1,4 @@
+{{- if eq .chezmoi.os "linux" -}}
 #!/usr/bin/env bash
 # This script runs **once** on macOS hosts.
 
@@ -15,3 +16,4 @@ brew update
 
 echo "Installing CLI tools..."
 brew install git micro moar lsd tealdeer thefuck bat zoxide mosh tmux curl wget
+{{- end -}}
