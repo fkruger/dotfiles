@@ -1,15 +1,10 @@
 
 {{- $choices := list "personal" "rpi" "openai" -}}
 {{- $role := promptChoiceOnce . "role" "What type of role do you want" $choices -}}
+{{- $email := cond (eq $role "openai") "fritz@openai.com" "fritz_269@yahoo.com" -}}
 
-{{- $email := "" -}}
-{{- if eq $role "openai" -}}
-  {{- $email = "fritz@openai.com" -}}
-{{- else -}}
-  {{- $email = "fritz_269@yahoo.com" -}}
-{{- end -}}
+[data]
+name = "Fritz Kruger"
+email = {{ $email | quote }}
+role = {{ $role | quote }}
 
-data:
-  name: "Fritz Kruger"
-  email: {{ $email | quote }}
-  role: {{ $role | quote }}
