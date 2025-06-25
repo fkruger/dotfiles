@@ -17,3 +17,5 @@ alias topmem='top -o mem'
 
 alias extip='curl ifconfig.me'
 
+eval $(thefuck --alias)
+
