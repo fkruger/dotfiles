@@ -1,8 +1,8 @@
+
+eval $(thefuck --alias)
+
 # -------- macOS‑specific tweaks -----
-{{- if eq .chezmoi.os "darwin" }}
-  export PATH="/opt/homebrew/bin:$PATH"
-  # any brew‑only env vars here
-{{- end }}
+export PATH="/opt/homebrew/bin:$PATH"
 
 
 # -------- Personal aliases ----------
