@@ -10,8 +10,8 @@ source ~/.zsh_aliases
 
 
 # -------- OAI specific --------------
-{{- if .openai }}
-  export SSH_AUTH_SOCK=/Users/fritz/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
+{{- if eq .role "openai" }}
+export SSH_AUTH_SOCK=/Users/fritz/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
   
   eval "$(am shell)"
   
@@ -27,9 +27,9 @@ source ~/.zsh_aliases
 
 
 # -------- personal specific --------------
-{{- if .personal }}
+{{- if eq .role "personal" }}
 {{- end }}
 
 # -------- IoT specific --------------
-{{- if .iot }}
+{{- if eq .role "iot" }}
 {{- end }}
