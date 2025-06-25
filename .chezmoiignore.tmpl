@@ -1,0 +1,9 @@
+README.md
+
+{{- if ne .chezmoi.os "linux" }}
+*-linux.*
+{{- end }}
+
+{{- if ne .chezmoi.os "darwin" }}
+*-darwin.*
+{{- end }}
