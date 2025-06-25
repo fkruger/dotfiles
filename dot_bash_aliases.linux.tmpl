@@ -19,7 +19,7 @@ ii() {
 
 
 # -------- OAI specific --------------
-{{- if .openai }}
+{{- if eq .role "openai" }}
       alias oaicode='python -m oaicode'
       alias oaipkg='python -m oaipkg' 
       alias tcom='source ~/.virtualenvs/tcom-ipsw/bin/activate; cd ~/code/openai/project/tcom'
@@ -27,10 +27,10 @@ ii() {
 {{- end }}
 
 # -------- personal specific --------------
-{{- if .personal }}
+{{- if eq .role "personal" }}
 {{- end }}
 
 # -------- IoT specific --------------
-{{- if .iot }}
+{{- if eq .role "rpi" }}
 {{- end }}
 
